@@ -10,7 +10,7 @@ namespace onepeople\router;
 
 use Exception;
 
-class RouteNotFoundException extends Exception
+class HandlerNotFound extends Exception
 {
     private $method;
     private $uri;
@@ -19,7 +19,7 @@ class RouteNotFoundException extends Exception
     {
         $this->method = $method;
         $this->uri = $uri;
-        parent::__construct("$method $uri");
+        parent::__construct("Handler not found for: $method $uri");
     }
 
     /**

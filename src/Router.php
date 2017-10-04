@@ -316,7 +316,7 @@ class Router
                 throw new TypeError("'$handler' is not callable.");
             }
         }
-        throw new RouteNotFoundException($method, $uri);
+        throw new HandlerNotFound($method, $uri);
     }
 
     /**
@@ -338,7 +338,7 @@ class Router
                     foreach ($bases as $base){
                         $fullRoute = $base.$route;
                         $callback = [$handler, $func->getName()];
-                        if(is_callable($converter = [$handler, 'convertHandler'])){
+                        if(is_callable($converter = [$handler, 'convertRoute'])){
                             call_user_func_array(
                                 $converter, [&$method, &$fullRoute, &$callback]);
                         }
