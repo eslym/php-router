@@ -63,7 +63,7 @@ class Router
             $doc = $reflector->getDocComment();
             foreach(preg_split('/(\r?\n|\n?\r)/', $doc) as $line){
                 if(preg_match($regex, $line, $matches)){
-                    yield [$matches[1][0], $matches[2][0]];
+                    yield [$matches[1], $matches[2]];
                 }
             }
         }
@@ -79,7 +79,7 @@ class Router
             $doc = $reflector->getDocComment();
             foreach(preg_split('/(\r?\n|\n?\r)/', $doc) as $line){
                 if(preg_match($regex, $line, $matches)){
-                    yield $matches[1][2];
+                    yield $matches[1];
                 }
             }
         }
