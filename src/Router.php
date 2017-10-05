@@ -332,6 +332,9 @@ class Router
         }else if(is_object($handler) || class_exists($handler)){
             $class = new ReflectionClass($handler);
             $bases = iterator_to_array(self::findBaseRoutes($class));
+            if(count($bases) == 0){
+                $base[]= "";
+            }
             foreach($class->getMethods() as $func){
                 if(!$func->isPublic()) continue;
                 foreach (self::findActionRoutes($func) as list($method, $route)){
