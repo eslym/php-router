@@ -333,7 +333,7 @@ class Router
             $class = new ReflectionClass($handler);
             $bases = iterator_to_array(self::findBaseRoutes($class));
             if(count($bases) == 0){
-                $base[]= "";
+                $bases[]= "";
             }
             foreach($class->getMethods() as $func){
                 if(!$func->isPublic()) continue;
