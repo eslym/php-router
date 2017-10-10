@@ -18,6 +18,7 @@ class MatchResult
     private $matches;
     private $namedParams;
     private $params;
+    private $query;
 
     /**
      * MatchResult constructor.
@@ -29,6 +30,7 @@ class MatchResult
     public static function tryMatch($regex, $method, $uri){
         $self = new self();
         $self->method = $method;
+        list($uri, $query) = explode('?', $uri, 2);
         if(preg_match(
             $self->regex = $regex,
             $self->uri = $uri,
@@ -52,6 +54,7 @@ class MatchResult
                     unset($self->params[$key]);
                 }
             }
+            $self->query = Query::parse($query);
             return $self;
         }
         return false;
@@ -126,6 +129,14 @@ class MatchResult
     {
         $this->handler = $handler;
         return $this;
+    }
+
+    /**
+     * @return Query
+     */
+    public function getQuery()
+    {
+        return $this->query;
     }
 
     function __clone()
