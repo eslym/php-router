@@ -54,7 +54,11 @@ class MatchResult
                     unset($self->params[$key]);
                 }
             }
-            $self->query = Query::parse($query);
+            if (!is_null($query)) {
+                $self->query = Query::parse($query);
+            } else {
+                $self->query = new Query();
+            }
             return $self;
         }
         return false;
