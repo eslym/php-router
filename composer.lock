@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "309a52b23adf6410684f639774ea0c34",
-    "content-hash": "de74950d466c22430ffe231d5c6e9ef6",
+    "hash": "1487d48a9f21e08f007a3ff780d692b1",
+    "content-hash": "0b705fd01379f4f833f6fc559869cbd1",
     "packages": [
         {
             "name": "1ppl/utils-compound",
-            "version": "0.0.1",
+            "version": "0.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/0nepeop1e/php-compound.git",
-                "reference": "29843e3051482bd9903d14b6ae5df602c4c987fe"
+                "reference": "85de0f7e6d25107d38c2e2e2330e85c0d8942099"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/0nepeop1e/php-compound/zipball/29843e3051482bd9903d14b6ae5df602c4c987fe",
-                "reference": "29843e3051482bd9903d14b6ae5df602c4c987fe",
+                "url": "https://api.github.com/repos/0nepeop1e/php-compound/zipball/85de0f7e6d25107d38c2e2e2330e85c0d8942099",
+                "reference": "85de0f7e6d25107d38c2e2e2330e85c0d8942099",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,7 @@
                 }
             ],
             "description": "Compound",
-            "time": "2017-10-26 17:39:07"
+            "time": "2017-11-07 11:41:11"
         }
     ],
     "packages-dev": [],
