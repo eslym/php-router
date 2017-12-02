@@ -18,7 +18,7 @@ use BadMethodCallException;
  * @method static put(string $route, callable $handler)
  * @method static patch(string $route, callable $handler)
  * @method static delete(string $route, callable $handler)
- * @method static addRoute(string $route, callable $handler)
+ * @method static addRoute(string $method, string $route, callable $handler)
  * @method static addRouteAuto(mixed $handler)
  * @method static array match(string $uri=null, string $method=null)
  * @method static mixed route(string $uri=null, string $method=null)
